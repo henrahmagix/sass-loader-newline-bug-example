@@ -1,5 +1,9 @@
 # sass-loader-newline-bug-example
 
+__Note:__ the newlines in Mavo have been fixed in https://github.com/mavoweb/mavo/pull/243 so, practically speaking, they're not an issue anymore. However, this issue with sass-loader still stands. That fix is available in Mavo v0.1.2 (see [this commit](https://github.com/mavoweb/mavo/commit/44592ba91ad3dac0454a2ae3b673d82c5fd903e8)) but, at the time of writing, only v0.1.0 was available to install via npm, which was my preferred method since I'm using webpack.
+
+---
+
 An example of webpack's sass-loader not correctly compiling newlines in a `.scss` file when imported from within the `node_modules` directory, whereas `node-sass` used directly compiles it correctly.
 
 The issue is in a `url()` of an inline svg, in this case a rubbish bin icon in [Mavo](http://mavo.io/): the newlines in the SCSS source are not compiled correctly, but they are via regular imports and also when compiled directly with node-sass.
