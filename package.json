@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "rm -r dist; npm run dist; npm run correct-with-node",
+    "test": "rm -r dist; npm run dist; npm run via-node-direct; npm run via-node-import",
     "dist": "NODE_ENV=production webpack",
-    "correct-with-node": "node-sass node_modules/mavo/src-css/mavo.scss > mavo.css"
+    "via-node-direct": "node-sass node_modules/mavo/src-css/mavo.scss > mavo-direct.css",
+    "via-node-import": "echo '@import \"node_modules/mavo/src-css/mavo\"' | node-sass --include-path=$PWD > mavo-imported.css"
   },
   "keywords": [],
   "author": "Henry Blyth <blyth.henry@gmail.com> (http://henryblyth.com/)",
