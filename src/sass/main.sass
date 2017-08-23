@@ -1,0 +1,37 @@
+/* --- Copied from Mavo _defs.scss --- */
+
+/* Without inline-svg function */
+@import copied-from-mavo-defs
+.rubbish-bin-copied-without-inline-svg-function
+    @extend %rubbish-bin-copied
+
+
+
+/* With inline-svg function */
+@function inline-svg($string)
+    @return url('data:image/svg+xml,#{url-encode($string)}')
+
+@import copied-from-mavo-defs
+
+.rubbish-bin-copied-with-copied-inline-svg-function
+    @extend %rubbish-bin-copied
+
+
+
+/* --- Direct from Mavo --- */
+
+
+
+/* Imported via sass-loader `~` import resolver */
+@import ~mavo/src-css/defs
+
+.via-import-resolver
+    @extend %rubbish-bin
+
+
+
+/* Imported directly via full node_modules path */
+@import node_modules/mavo/src-css/defs
+
+.via-node-modules-path
+    @extend %rubbish-bin
