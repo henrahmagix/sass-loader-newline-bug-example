@@ -14,6 +14,8 @@ System: OS X 10.11.6 | node v7.5.0 | npm v4.6.1 | shell Bash
 - Open `dist/app.css` and confirm the results below
 - Open `mavo.css` and see how everything is fine
 
+You might need to `npm rebuild node-sass`.
+
 ### Correct results
 These parts of the CSS file will load correctly in the browser.
 
