@@ -20,6 +20,8 @@ System: OS X 10.11.6 | node v7.5.0 | npm v4.6.1 | shell Bash
 
 You might need to `npm rebuild node-sass`.
 
+__Note:__ since each extension (copied and source) is loaded twice, the rule selectors become the same. However, each block of CSS output is distinct, and there are CSS comments separating them for clarity.
+
 ### Correct results
 These parts of the CSS file will load correctly in the browser.
 
